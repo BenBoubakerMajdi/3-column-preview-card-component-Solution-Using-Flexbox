@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: max-content;
+    background: $Very_light_gray;
+
+}
+body{
+    color: $Very_light_gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5.5rem 0;
+    border-radius: 10px;
+    width: 20.438rem;
+    overflow: hidden;
+}
+
+.child{
+    width: 20.438rem;
+    padding: 3rem;
+    &:nth-child(1){
+        background: $Bright_orange ;
+        .btn{
+            color:$Bright_orange  ;
+        }
+    }
+    &:nth-child(2){
+        background: $Dark_cyan;
+        .btn{
+            color: $Dark_cyan;
+        }
+    }
+    &:nth-child(3){
+        background: $Very_dark_cyan;
+        .btn{
+            color: $Very_dark_cyan;
+        }
+    }
+    h1{
+        font-family: 'Big Shoulders Display', cursive;
+        font-weight: $bold_Big;
+        text-transform: uppercase;
+        font-size: 2.125rem;
+        color: $Very_light_gray;
+        padding: 2.5rem 0;
+    }
+    p, .btn{
+        font-family: 'Lexend Deca', sans-serif;
+    }
+    p{
+        color:$Transparent_white ;
+        font-size: 0.938rem;
+        line-height: 1.5rem;
+        opacity: 0.7;
+        font-weight: $thin_Lexend;
+    }
+    .btn{
+        text-align: center;
+        width: max-content;
+        background: $Very_light_gray;
+        border-radius: 30px;
+        padding: 1.125rem 2rem;
+        margin-top: 1.75rem;
+
+        &:hover{
+            color: $Very_light_gray;
+            background: transparent;
+            border: 2px solid $Very_light_gray;
+            cursor: pointer;
+        }
+    }
+
+}
+
+@media(min-width:1024px){
+    body{
+        height: 100vh;
+    }
+    .parent{
+        
+        flex-direction: row;
+        width: 57.5rem;
+        h1{
+            font-size: 2.125rem;
+        }
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.938rem;
+        margin-top: 5.375rem !important;
+    }
+}
